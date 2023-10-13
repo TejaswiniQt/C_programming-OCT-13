@@ -1,0 +1,24 @@
+//Check if ith bit is set or not
+
+#include <stdio.h>
+
+void set_or_not(int num,int bit)
+{
+    int mask = 0;
+    mask = 1 << (bit-1);
+    if(num & mask)
+    printf("The bit is set\n");  
+    else
+    printf("The bit is not set\n");
+}
+
+int main()
+{
+    int num,bit;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    printf("Enter the bit: ");
+    scanf("%d",&bit);
+    set_or_not(num,bit);
+    return 0;
+}

@@ -1,0 +1,22 @@
+//Set the ith bit of a number
+
+#include <stdio.h>
+
+void set_ith_bit(int num,int bit)
+{
+    int mask,set_bit;
+    mask = 1 << (bit-1);
+    set_bit = mask | num;
+    printf("After setting the bit the value is: %d\n",set_bit);
+}
+
+int main()
+{
+    int num,bit;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    printf("Enter the bit: ");
+    scanf("%d",&bit);
+    set_ith_bit(num,bit);
+    return 0;
+}

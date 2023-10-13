@@ -1,0 +1,22 @@
+//Clear the ithbit of a number
+
+#include <stdio.h>
+
+void clear_ith_bit(int num,int bit)
+{
+    int mask,clear_bit;
+    mask = 1 << (bit-1);
+    clear_bit = ~mask & num;
+    printf("After setting the bit the value is: %d\n",clear_bit);
+}
+
+int main()
+{
+    int num,bit;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    printf("Enter the bit: ");
+    scanf("%d",&bit);
+    clear_ith_bit(num,bit);
+    return 0;
+}

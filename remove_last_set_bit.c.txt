@@ -1,0 +1,18 @@
+//Remove the last set bit of a number
+
+#include <stdio.h>
+
+void remove_last_set_bit(int num)
+{
+    int res = num & num-1;
+    printf("After removing the last set bit of the number is: %d\n",res);
+}
+
+int main()
+{
+    int num;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    remove_last_set_bit(num);
+    return 0;
+}
